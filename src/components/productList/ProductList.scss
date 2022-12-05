@@ -1,0 +1,99 @@
+.productList {
+  .header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 24px;
+
+    p {
+      width: 119px;
+      height: 24px;
+    }
+
+    .searchBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 618px;
+      height: 40px;
+
+      background-color: #f5f5f5;
+      border-radius: 100px;
+      border: 2px solid rgba(198, 193, 209, 0.3);
+
+      margin-left: 180px;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: #f5f5f5;
+        padding-left: 24px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      padding-right: 20px;
+    }
+
+    .excelExport {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 32px;
+      height: 32px;
+
+      margin-left: 24px;
+
+      text-align: center;
+
+      border-radius: 8px;
+      background-color: #f5f5f5;
+    }
+  }
+  table {
+    width: 1132px;
+    border-collapse: collapse;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] + label {
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      border: 3px solid #676767;
+      border-radius: 3px;
+    }
+
+    thead {
+      color: #f5f5f5;
+      height: 32px;
+      background-color: #676767;
+    }
+    tbody > tr {
+      height: 48px;
+      border-bottom: 2px solid rgba(103, 103, 103, 0.3);
+    }
+    .detailData {
+      height: 218px;
+
+      div {
+        font-size: 12px;
+        text-align: left;
+      }
+
+      img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+    td {
+      width: 80px;
+      height: 24px;
+    }
+  }
+}

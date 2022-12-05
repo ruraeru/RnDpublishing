@@ -91,7 +91,7 @@ export default function ReportData() {
                         width: "280px",
                         height: "160px",
                         backgroundColor: "red",
-                        marginRight: "24px"
+                        marginRight: "24px",
                     }}>
                         <div className="name_state">
                             <b>

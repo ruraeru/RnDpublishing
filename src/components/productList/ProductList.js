@@ -1,26 +1,44 @@
 import styled from "styled-components";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { SiMicrosoftexcel } from "react-icons/si";
-import DetailData from "./DetailData";
-import ReportData from "./ReportData";
+import DetailData from "../DetailData";
+import ReportData from "../ReportData";
+import "./ProductList.scss";
 
+{/* <DetailData />
+                    <ReportData /> */}
+
+const showDiv = (e) => {
+    console.log(e.target);
+}
 
 const DataList = () => {
     return (
-        <tr>
-            <td>
-                <input type="checkbox" id="checkbox" />
-                <label htmlFor="checkbox" />
-            </td>
-            <td>교육용</td>
-            <td>소프트웨어콘텐츠 과</td>
-            <td>스마트 패드</td>
-            <td>9115</td>
-            <td>대여가능</td>
-        </tr>
+        <>
+            {/* 클릭시 div 확장되면서 
+         ReportData나 DetailData 
+         컴포넌트 호출 구현해야함*/}
+            <tr onClick={e => {
+                showDiv(e);
+            }}>
+                <td>
+                    <input type="checkbox" id="checkbox" />
+                    <label htmlFor="checkbox" />
+                </td>
+                <td>교육용</td>
+                <td>소프트웨어콘텐츠 과</td>
+                <td>스마트 패드</td>
+                <td>9115</td>
+                <td>대여가능</td>
+            </tr>
+            {/* <DetailData />
+            <ReportData /> */}
+        </>
     );
 }
 
+
+//refac plz
 const ListNav = styled.div`
    width: 100%;
    position: fixed;
@@ -48,7 +66,7 @@ export default function ProductList() {
                     <BiSearchAlt2 size="17px" color="#9785CB" />
                 </div>
                 <div className="excelExport">
-                    <SiMicrosoftexcel size="27" color="#20744A" />
+                    <SiMicrosoftexcel size="27px" color="#20744A" />
                 </div>
             </div>
             <table>
@@ -72,8 +90,6 @@ export default function ProductList() {
                 </thead>
                 <tbody>
                     <DataList />
-                    <DetailData />
-                    <ReportData />
                     <DataList />
                     <DataList />
                     <tr style={{

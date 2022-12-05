@@ -1,5 +1,7 @@
+import axios from "axios";
+import { useEffect } from "react";
 import styled from "styled-components";
-import ProductList from "./components/ProductList";
+import ProductList from "./components/productList/ProductList";
 
 export default function App() {
   return (

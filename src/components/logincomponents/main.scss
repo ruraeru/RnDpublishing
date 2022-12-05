@@ -1,0 +1,32 @@
+.mainWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 540px;
+      height: 64px;
+      border-radius: 8px;
+      border: 1px solid #c6c6c6;
+      margin-bottom: 45px;
+    }
+    button {
+      height: 44px;
+      margin-top: -9px;
+
+      border-radius: 8px;
+      border: 1px solid #c6c6c6;
+      background-color: #c6c6c6;
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 540px;
+}

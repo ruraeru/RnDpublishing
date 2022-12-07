@@ -1,11 +1,14 @@
-import "./Header.scss";
+import { Link } from "react-router-dom";
+import "./header.scss";
 
 export default function Header() {
     return (
         <>
             <div className="headerWrap">
                 <div className="logo">
-                    <p>로고</p>
+                    <Link to="/">
+                        <p>로고</p>
+                    </Link>
                 </div>
                 <div className="headerContents">
                     <p>

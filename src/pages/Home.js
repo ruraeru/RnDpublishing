@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
-import Header from "./header/Header";
-import ProductList from "./productList/ProductList";
-import Profile from "./profile/Profile";
+import Header from "../components/header/header";
+import ProductList from "../components/productList/productList";
+import Profile from "../components/profile/profile";
 
-export default function Main({ children }) {
+export default function Home({ children }) {
     const path = useLocation().pathname;
     console.log(path);
     return (

@@ -1,9 +1,23 @@
-.loginWrap {
+.center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  width: 1200px;
+  height: 600px;
+
+  border-radius: 550px;
+  background-color: #ffffff;
+}
+
+.loginWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: #404041;
   ul {
     display: inline-flex;
     list-style: none;

@@ -33,7 +33,7 @@ const Detail = styled.tr`
     .RentalUserData {
         width: 200px;
         height: 160px;
-        background-color: rebeccapurple;
+        /* background-color: rebeccapurple; */
         b {
             font-weight: 700;
             font-size: 20px;
@@ -90,7 +90,7 @@ export default function ReportData() {
                     <div style={{
                         width: "280px",
                         height: "160px",
-                        backgroundColor: "red",
+                        // backgroundColor: "red",
                         marginRight: "24px",
                     }}>
                         <div className="name_state">

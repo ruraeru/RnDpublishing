@@ -3,7 +3,7 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { SiMicrosoftexcel } from "react-icons/si";
 import DetailData from "../DetailData";
 import ReportData from "../ReportData";
-import "./ProductList.scss";
+import "./productList.scss";
 
 {/* <DetailData />
                     <ReportData /> */}
@@ -31,8 +31,6 @@ const DataList = () => {
                 <td>9115</td>
                 <td>대여가능</td>
             </tr>
-            {/* <DetailData />
-            <ReportData /> */}
         </>
     );
 }
@@ -91,6 +89,8 @@ export default function ProductList() {
                 <tbody>
                     <DataList />
                     <DataList />
+                    <DetailData />
+                    <ReportData />
                     <DataList />
                     <tr style={{
                         backgroundColor: "#D9D9D9"

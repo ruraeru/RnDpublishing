@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
     BrowserRouter,
     Routes,
@@ -7,13 +7,19 @@ import {
     useParams
 } from "react-router-dom";
 
-import Login from "./Login";
+import Login from "./login";
 import Home from "../Home";
-import ProductList from "../productList/ProductList";
-import ToolAdd from "../rental/ToolAdd";
+import ProductList from "../../components/productList";
+import ToolAdd from "../rental";
+import Register from "../register";
 
 export default function RouteTree() {
     const [login, setLogin] = useState(false);
+    // useEffect(() => {
+    //     if (localStorage.getItem("jwttoken")) {
+    //         setLogin(true);
+    //     }
+    // }, []);
     return (
         <BrowserRouter>
             <Routes>
@@ -25,6 +31,8 @@ export default function RouteTree() {
                     <ProductList />
                 </Home> : <Login />} />
                 {/* <Route path="/login" element={<Login />} /> */}
+                <Route path="/user/login" element={<Login />} />
+                <Route path="/user/signup" element={<Register />} />
                 <Route path="/home" element={<Home>
                     <ProductList />
                 </Home>} />

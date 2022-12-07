@@ -1,16 +1,21 @@
 import styled from "styled-components";
+import { SiMicrosoftexcel } from "react-icons/si";
 
 export default function ToolAdd() {
     return (
         <RentalWrap>
-            <h3>기자재 추가</h3>
+            <h2>기자재 추가</h2>
             <div>
                 <img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/1029844824592537-0153a154-ac97-4fe2-8180-75d1dcfb6d7c.jpg"
                     alt="productImg" />
                 <div>
                     <p>이미지 파일 불러오기</p>
-                    <input type="file" />
+                    <input id="file" type="file" />
                     <p>기자재 명칭</p>
+                    <input />
+                    <p>
+                        <SiMicrosoftexcel size="32" color="20744A" />
+                    </p>
                     <input />
                 </div>
             </div>
@@ -45,10 +50,17 @@ export default function ToolAdd() {
 const RentalWrap = styled.div`
    display: flex;
    flex-direction: column;
+   h2 {
+    text-align: left;
+   }
 
    img {
-    width: 128px;
+    width: 160px;
     height: 207px;
+
+    margin-right: 16px;
+    margin-bottom: 16px;
+
     border: 1px solid black;
     border-radius: 8px;
    }
@@ -66,9 +78,38 @@ const RentalWrap = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
     div {
+        height: 206px;
+        p {
+            width: 100%;
+            text-align: left;
+            margin: 0;
+            margin-bottom: 6px;
+        }
         display: flex;
         flex-direction: column;
     }
    }
+
+   table {
+    border-collapse: collapse;
+    thead {
+        height: 36px;
+    }
+    tbody {
+        height: 48px;
+    }
+
+    tr {
+        th {
+            color: #fafafa;
+            background-color: #676767;
+        }
+        td {
+            background-color: #f5f5f5;
+        }
+    }
+   }
+   
 `;

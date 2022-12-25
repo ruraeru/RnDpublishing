@@ -1,11 +1,13 @@
 #userType {
-  * {
-    margin-right: 50px;
-  }
+  display: flex;
   img {
     width: 140px;
     height: 180px;
     cursor: pointer;
+    filter: opacity(0.7);
+    &:hover {
+      filter: opacity(1);
+    }
   }
 }
 

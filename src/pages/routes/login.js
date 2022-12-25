@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.scss";
 
 export default function LoginMain() {
+    const navigate = useNavigate();
     const [data, setData] = useState();
     const [userData, setUserData] = useState();
     const [input, setInput] = useState({
@@ -18,8 +19,12 @@ export default function LoginMain() {
             user_pw: password
         }).then((res) => {
             setData(res.data);
-            localStorage.setItem("jwttoken", res.data.token.token);
-            window.location.href = "/home";
+            // localStorage.setItem("jwttoken", res.data.token.token);
+            navigate("/home");
+            console.log(res);
+            // onTokenAuth();
+        }).catch(e => {
+            console.log(e);
         });
     };
 
@@ -34,11 +39,10 @@ export default function LoginMain() {
     const onSubmit = (e) => {
         e.preventDefault();
         onUserAuth();
-        onTokenAuth();
-        // window.location.href = "/home";
     }
 
     const onTokenAuth = async () => {
+        console.log(data);
         await axios.get(`http://120.142.105.189:5080/test/token/${username}`, {
             headers: {
                 // token: data.token.token
